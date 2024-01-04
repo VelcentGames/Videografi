@@ -1,0 +1,29 @@
+{
+	"config": "airmobile",
+	"compilerOptions": {
+		"source-path": [
+			"src"
+		],
+		"library-path": [
+			"src/lib/AdMob.ane",
+			"src/lib/Away3D.swc",
+			"src/lib/greensock.swc"
+		],
+		"output": "Videografi.swf"
+	},
+	"mainClass": "HelloAIR",
+	"application": "Videografi-app.xml",
+	"airOptions": {
+		"extdir": [
+			"$(AppConfig)/ActionScript 3.0/libs",
+			"src/lib/"
+		],
+		"android": {
+			"output": "Videografi.apk",
+			"signingOptions": {
+				"storetype": "jks",
+				"keystore": "studio.manja.GLOBAL.jks"
+			}
+		}
+	}
+}

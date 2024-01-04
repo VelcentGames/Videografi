@@ -1,0 +1,5 @@
+<id>
+Rilis v1.0.0:
+- Materi pengambilan gambar video
+- Simulasi pengambilan gambar video
+</id>

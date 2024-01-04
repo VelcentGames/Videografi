@@ -1,0 +1,372 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!--
+	___________________KETERANGAN______________________
+
+	# atur :
+	-> acak soal      : - mengacak urutan soal
+	-> acak jawaban   : - mengacak urutan jawaban
+	-> durasi         : - lama waktu permainan
+	                    - minimal 1 menit
+	                    - maksimal 5940 menit
+	-> jumlah         : - banyak soal yang dimainkan
+	                    - tidak boleh lebih dari jumlah data soal di sini
+	-> lihat          : - perlihatkan statistik saat bermain
+	                   -> langsung :
+	                      - jika ya, skor akan dieksekusi per soal & tidak bisa memilih soal
+	                      - jika tidak, skor akan dieksekusi saat semua soal dijawab / waktu habis,
+	                        bisa memilih soal & mengganti jawaban soal
+	                   -> jawaban :
+	                      - perlihatkan jawaban saat bermain, hanya berlaku untuk mode langsung
+	                   -> skor :
+	                      - perlihatkan skor saat bermain, hanya berlaku untuk mode langsung
+	                   -> nilai :
+	                      - perlihatkan nilai saat bermain, hanya berlaku untuk mode langsung
+	                   -> hasil :
+	                      - perlihatkan hasil saat bermain, hanya berlaku untuk mode langsung
+
+
+	# tipe soal :
+	-> 1 : - tipe pilihan ganda
+	       - teks, gambar, video
+	       - boleh lebih dari 1 jawaban benar
+	       - minimal 1 jawaban benar / 1 jawaban salah
+	-> 2 : - tipe drag & drop
+	       - teks, gambar, video
+	       - soal / jawaban tidak boleh sama
+	-> 3 : - tipe koneksi
+	       - teks, gambar, video
+	       - koneksi kiri / kanan boleh lebih dari 1
+	       - soal / jawaban boleh sama
+	-> 4 : - tipe teka teki silang
+	       - teks, gambar, video
+	       - isian mendatar & menurun
+	       - 1 isian boleh lebih dari 1 kata
+	-> 5 : - tipe teka teki lebah
+	       - teks, gambar, video
+	       - isian mendatar, menurun, diagonal ke atas, & diagonal ke bawah
+	       - 1 isian boleh lebih dari 1 kata
+
+	# media :
+	-> video  : mp4, avi, mov, flv, 3gp, 3gpp, webm
+	-> audio  : mp3, m4a, ogg, wav
+	-> raster : jpg, jpeg, gif, png, tiff, bmp
+	-> vektor : svg, ai
+	-> multi  : swf
+-->
+<quest>
+	<atur>
+		<acak soal='ya' jawaban='ya' />
+		<lihat langsung='ya' jawaban='ya' skor='ya' nilai='tidak' hasil='tidak' />
+		<durasi>120</durasi>
+		<jumlah>
+			<soal tipe='1'>4</soal>
+			<soal tipe='2'>1</soal>
+			<soal tipe='3'>1</soal>
+			<soal tipe='4'>1</soal>
+		</jumlah>
+		<kriteria>
+			<status persen='70' lulus='LULUS' gagal='TIDAK LULUS' />
+			<nilai persen='9' warna='#FF0000'>
+				<level>Sangat Buruk</level>
+				<pesan>Nilai Anda sangat buruk, Anda harus belajar sangat giat.</pesan>
+			</nilai>
+			<nilai persen='44' warna='#FF8800'>
+				<level>Buruk</level>
+				<pesan>Nilai Anda buruk, Anda harus belajar sangat giat.</pesan>
+			</nilai>
+			<nilai persen='69' warna='#FFFF00'>
+				<level>Kurang</level>
+				<pesan>Nilai Anda tidak cukup, tingkatkan kapasitas belajar Anda.</pesan>
+			</nilai>
+			<nilai persen='79' warna='#00FF00'>
+				<level>Cukup</level>
+				<pesan>Nilai Anda cukup, tingkatkan kapasitas belajar Anda.</pesan>
+			</nilai>
+			<nilai persen='89' warna='#00FF88'>
+				<level>Baik</level>
+				<pesan>Nilai Anda baik, teruslah belajar dengan giat.</pesan>
+			</nilai>
+			<nilai persen='99' warna='#0088FF'>
+				<level>Sangat Baik</level>
+				<pesan>Nilai Anda sangat baik, pertahankan nilai Anda.</pesan>
+			</nilai>
+			<nilai persen='100' warna='#00FFFF'>
+				<level>Sempurna</level>
+				<pesan>Nilai Anda sempurna, tetaplah jadi yang terbaik.</pesan>
+			</nilai>
+		</kriteria>
+	</atur>
+	<soal tipe='1' aktif='ya'>
+		<skor benar='10' salah='-5' />
+		<tanya>Lorem ipsum dolor sit amet ?</tanya>
+		<jawab tipe='teks' hasil='benar'>LOREM</jawab>
+		<jawab tipe='teks' hasil='salah'>IPSUM</jawab>
+		<jawab tipe='teks' hasil='salah'>DOLOR</jawab>
+		<jawab tipe='teks' hasil='salah'>SIT</jawab>
+		<jawab tipe='teks' hasil='salah'>AMET</jawab>
+	</soal>
+	<soal tipe='1' aktif='ya'>
+		<skor benar='10' salah='-5' />
+		<tanya>Lorem ipsum dolor sit amet ?</tanya>
+		<media tipe='jpg'>image/gambar.jpg</media>
+		<jawab tipe='teks' hasil='salah'>LOREM</jawab>
+		<jawab tipe='teks' hasil='benar'>IPSUM</jawab>
+		<jawab tipe='teks' hasil='salah'>DOLOR</jawab>
+		<jawab tipe='teks' hasil='benar'>SIT</jawab>
+	</soal>
+	<soal tipe='1' aktif='ya'>
+		<skor benar='20' salah='-5' />
+		<tanya>Lorem ipsum dolor sit amet ?</tanya>
+		<media tipe='mp4'>video/video.mp4</media>
+		<jawab tipe='teks' hasil='salah'>LOREM</jawab>
+		<jawab tipe='teks' hasil='salah'>IPSUM</jawab>
+		<jawab tipe='teks' hasil='salah'>DOLOR</jawab>
+		<jawab tipe='teks' hasil='salah'>SIT</jawab>
+		<jawab tipe='teks' hasil='benar'>AMET</jawab>
+	</soal>
+	<soal tipe='1' aktif='ya'>
+		<skor benar='10' salah='-5' />
+		<tanya>Lorem ipsum dolor sit amet ?</tanya>
+		<media tipe='mp4'>video/video.mp4</media>
+		<media tipe='jpg'>image/gambar.jpg</media>
+		<media tipe='jpg'>image/gambar.jpg</media>
+		<media tipe='mp4'>video/video.mp4</media>
+		<media tipe='mp4'>video/video.mp4</media>
+		<media tipe='jpg'>image/gambar.jpg</media>
+		<jawab tipe='teks' hasil='salah'>LOREM</jawab>
+		<jawab tipe='teks' hasil='salah'>IPSUM</jawab>
+		<jawab tipe='mp4' hasil='salah'>video/video.mp4</jawab>
+		<jawab tipe='jpg' hasil='benar'>image/gambar.jpg</jawab>
+		<jawab tipe='teks' hasil='salah'>AMET</jawab>
+	</soal>
+	<soal tipe='2' aktif='ya'>
+		<dnd>
+			<skor benar='5' salah='0'/>
+			<tanya>Lorem ipsum ?</tanya>
+			<media tipe='mp4'>video/video.mp4</media>
+			<jawab tipe='mp4'>video/video.mp4</jawab>
+		</dnd>
+		<dnd>
+			<skor benar='5' salah='0'/>
+			<tanya>ipsum dolor ?</tanya>
+			<jawab tipe='teks'>IPSUM</jawab>
+		</dnd>
+		<dnd>
+			<skor benar='5' salah='0'/>
+			<tanya>dolor sit ?</tanya>
+			<jawab tipe='teks'>DOLOR</jawab>
+		</dnd>
+		<dnd>
+			<skor benar='5' salah='0'/>
+			<tanya>sit amet ?</tanya>
+			<media tipe='jpg'>image/gambar.jpg</media>
+			<jawab tipe='teks'>SIT</jawab>
+		</dnd>
+		<dnd>
+			<skor benar='5' salah='0'/>
+			<tanya>Bakery Baking Blueberries?</tanya>
+			<jawab tipe='jpg'>image/gambar.jpg</jawab>
+		</dnd>
+		<dnd>
+			<skor benar='5' salah='0'/>
+			<tanya>Microsoft Surface Book 2?</tanya>
+			<jawab tipe='mp4'>video/video.mp4</jawab>
+		</dnd>
+	</soal>
+	<soal tipe='3' aktif='ya'>
+		<konek>
+			<skor benar='5' salah='0'/>
+			<kiri tipe='teks'>Lorem ipsum ?</kiri>
+			<kanan tipe='teks'>IPSUM</kanan>
+		</konek>
+		<konek>
+			<skor benar='5' salah='0'/>
+			<kiri tipe='teks'>ipsum dolor ?</kiri>
+			<kanan tipe='teks'>IPSUM</kanan>
+		</konek>
+		<konek>
+			<skor benar='5' salah='0'/>
+			<kiri tipe='teks'>dolor sit ?</kiri>
+			<kanan tipe='teks'>DOLOR</kanan>
+		</konek>
+		<konek>
+			<skor benar='5' salah='0'/>
+			<kiri tipe='teks'>dolor amet ?</kiri>
+			<kanan tipe='teks'>DOLOR</kanan>
+		</konek>
+		<konek>
+			<skor benar='5' salah='0'/>
+			<kiri tipe='teks'>sit amet ?</kiri>
+			<kanan tipe='teks'>SIT</kanan>
+		</konek>
+		<konek>
+			<skor benar='5' salah='0'/>
+			<kiri tipe='jpg'>image/gambar.jpg</kiri>
+			<kanan tipe='teks'>Bakery Baking Blueberries?</kanan>
+		</konek>
+		<konek>
+			<skor benar='5' salah='0'/>
+			<kiri tipe='teks'>Microsoft Surface Book 2?</kiri>
+			<kanan tipe='mp4'>video/video.mp4</kanan>
+		</konek>
+	</soal>
+	<soal tipe='4' aktif='ya'>
+		<ukuran baris='20' kolom='20'/>
+		<kotak>-|B|A|K|E|R|Y|-|-|-|-|-|-|-|-|-|-|-|-|-</kotak>
+		<kotak>-|L|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</kotak>
+		<kotak>-|U|-|-|-|-|-|-|C|A|R|D|A|N|O|-|-|-|-|-</kotak>
+		<kotak>-|B|A|K|I|N|G|-|-|N|-|-|-|-|-|-|S|-|-|-</kotak>
+		<kotak>-|E|-|-|-|-|-|D|A|G|U|E|R|R|E|-|U|-|-|-</kotak>
+		<kotak>-|R|-|-|-|-|-|-|-|L|-|-|-|-|-|-|P|-|-|-</kotak>
+		<kotak>-|R|-|-|-|-|-|-|-|E|X|P|O|S|U|R|E|-|-|-</kotak>
+		<kotak>M|I|C|R|O|S|O|F|T|-|-|-|-|H|-|-|R|-|-|-</kotak>
+		<kotak>-|E|-|-|-|-|-|-|-|-|-|K|-|U|-|-| |-|-|-</kotak>
+		<kotak>-|S|U|R|F|A|C|E|-|-|-|N|-|T|-|-|V|-|-|-</kotak>
+		<kotak>-|-|-|-|-|-|L|-|-|-|-|E|-|T|-|-|H|-|-|-</kotak>
+		<kotak>-|-|-|-|B|O|O|K| |2|-|E|-|E|-|-|S|-|-|-</kotak>
+		<kotak>-|-|-|-|-|-|S|-|-|-|-| |-|R|-|-|-|-|-|-</kotak>
+		<kotak>E|X|T|R|E|M|E| |C|L|O|S|E| |U|P|-|-|-|-</kotak>
+		<kotak>-|-|-|-|-|-| |-|-|-|-|H|-|S|-|-|-|-|-|-</kotak>
+		<kotak>-|-|-|-|-|-|U|-|-|-|-|O|-|P|-|-|-|-|-|D</kotak>
+		<kotak>-|-|G|R|O|U|P| |S|H|O|T|-|E|-|-|-|-|-|O</kotak>
+		<kotak>-|-|-|-|-|-|-|-|-|-|-|-|-|E|-|-|-|-|-|L</kotak>
+		<kotak>-|-|-|-|-|-|-|-|-|-|-|-|-|D|I|G|I|T|A|L</kotak>
+		<kotak>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|Y</kotak>
+		<lihat>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</lihat>
+		<lihat>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</lihat>
+		<lihat>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</lihat>
+		<lihat>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</lihat>
+		<lihat>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</lihat>
+		<lihat>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</lihat>
+		<lihat>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</lihat>
+		<lihat>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</lihat>
+		<lihat>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</lihat>
+		<lihat>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</lihat>
+		<lihat>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</lihat>
+		<lihat>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</lihat>
+		<lihat>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</lihat>
+		<lihat>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</lihat>
+		<lihat>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</lihat>
+		<lihat>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</lihat>
+		<lihat>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</lihat>
+		<lihat>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</lihat>
+		<lihat>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</lihat>
+		<lihat>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</lihat>
+		<nomor>-|1|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</nomor>
+		<nomor>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</nomor>
+		<nomor>-|-|-|-|-|-|-|-|2|13|-|-|-|-|-|-|-|-|-|-</nomor>
+		<nomor>-|3|-|-|-|-|-|-|-|-|-|-|-|-|-|-|16|-|-|-</nomor>
+		<nomor>-|-|-|-|-|-|-|4|-|-|-|-|-|-|-|-|-|-|-|-</nomor>
+		<nomor>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</nomor>
+		<nomor>-|-|-|-|-|-|-|-|-|5|-|-|-|15|-|-|-|-|-|-</nomor>
+		<nomor>6|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</nomor>
+		<nomor>-|-|-|-|-|-|-|-|-|-|-|14|-|-|-|-|-|-|-|-</nomor>
+		<nomor>-|7|-|-|-|-|12|-|-|-|-|-|-|-|-|-|-|-|-|-</nomor>
+		<nomor>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</nomor>
+		<nomor>-|-|-|-|8|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</nomor>
+		<nomor>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</nomor>
+		<nomor>9|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</nomor>
+		<nomor>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</nomor>
+		<nomor>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|17</nomor>
+		<nomor>-|-|10|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</nomor>
+		<nomor>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</nomor>
+		<nomor>-|-|-|-|-|-|-|-|-|-|-|-|-|11|-|-|-|-|-|-</nomor>
+		<nomor>-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-</nomor>
+		<datar nomor='1'>
+			<skor benar='10' salah='0' />
+			<soal>Bakery ?</soal>
+		</datar>
+		<datar nomor='2'>
+			<skor benar='20' salah='0' />
+			<soal>Girolamo ... melengkapi kamera Obscura dengan lensa pada bagian depan.</soal>
+		</datar>
+		<datar nomor='3'>
+			<skor benar='10' salah='0' />
+			<soal>Baking ?</soal>
+		</datar>
+		<datar nomor='4'>
+			<skor benar='20' salah='0' />
+			<soal>Pada tahun 1839, Louis ... mempublikasikan temuannya berupa gambar yang dihasilkan dari bayangan sebuah jalan di Paris pada sebuah pelat tembaga berlapis perak.</soal>
+		</datar>
+		<datar nomor='5'>
+			<skor benar='10' salah='0' />
+			<soal>Exposure ?</soal>
+		</datar>
+		<datar nomor='6'>
+			<skor benar='10' salah='0' />
+			<soal>... Surface Book 2.</soal>
+		</datar>
+		<datar nomor='7'>
+			<skor benar='10' salah='0' />
+			<soal>Microsoft ... Book 2.</soal>
+		</datar>
+		<datar nomor='8'>
+			<skor benar='10' salah='0' />
+			<soal>Microsoft Surface ...</soal>
+			<media tipe='mp4'>video/video.mp4</media>
+		</datar>
+		<datar nomor='9'>
+			<skor benar='10' salah='0' />
+			<soal>XCU ?</soal>
+		</datar>
+		<datar nomor='10'>
+			<skor benar='10' salah='0' />
+			<soal>GS ?</soal>
+		</datar>
+		<datar nomor='11'>
+			<skor benar='10' salah='0' />
+			<soal>Kamera perekam video yang menyimpan data dalam format kode biner bit per bit yang terdiri atas rangkaian 1 (on) dan 0 (off).</soal>
+		</datar>
+		<turun nomor='1'>
+			<skor benar='10' salah='0' />
+			<soal>Blueberries ?</soal>
+		</turun>
+		<turun nomor='12'>
+			<skor benar='10' salah='0' />
+			<soal>CU ?</soal>
+		</turun>
+		<turun nomor='13'>
+			<skor benar='10' salah='0' />
+			<soal>High ...</soal>
+		</turun>
+		<turun nomor='14'>
+			<skor benar='10' salah='0' />
+			<soal>KS ?</soal>
+		</turun>
+		<turun nomor='15'>
+			<skor benar='10' salah='0' />
+			<soal>Kecepatan Rana.</soal>
+		</turun>
+		<turun nomor='16'>
+			<skor benar='10' salah='0' />
+			<soal>Jenis kamera dengan kualitas gambar 60 persen lebih jernih dibanding VHS.</soal>
+		</turun>
+		<turun nomor='17'>
+			<skor benar='10' salah='0' />
+			<soal>Gerakan kamera di tripod dan di atas landasan rodanya.</soal>
+		</turun>
+	</soal>
+	<soal tipe='5' aktif='tidak'>
+		<ukuran baris='20' kolom='20'/>
+		<kotak>╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳</kotak>
+		<kotak>-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-</kotak>
+		<kotak>╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳</kotak>
+		<kotak>-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-</kotak>
+		<kotak>╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳</kotak>
+		<kotak>-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-</kotak>
+		<kotak>╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳</kotak>
+		<kotak>-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-</kotak>
+		<kotak>╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳</kotak>
+		<kotak>-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-</kotak>
+		<kotak>╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳</kotak>
+		<kotak>-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-</kotak>
+		<kotak>╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳</kotak>
+		<kotak>-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-</kotak>
+		<kotak>╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳</kotak>
+		<kotak>-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-</kotak>
+		<kotak>╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳</kotak>
+		<kotak>-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-</kotak>
+		<kotak>╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳</kotak>
+		<kotak>-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-╳-</kotak>
+	</soal>
+</quest>
