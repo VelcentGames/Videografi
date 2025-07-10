@@ -16,14 +16,14 @@
 	<text xml:lang="ja">Japanese App name goes here</text>
 	</name>
 -->
-<application xmlns="http://ns.adobe.com/air/application/50.2">
+<application xmlns="http://ns.adobe.com/air/application/51.2">
   <id>studio.manja.videografi</id>
-  <versionNumber>22.6.0</versionNumber>
-  <versionLabel>1.0.1</versionLabel>
+  <versionNumber>1.0.2</versionNumber>
+  <versionLabel>1.0.2</versionLabel>
   <filename>Videografi</filename>
 	<description>Tutorial pengambilan video</description>
   <name>Videografi</name>
-	<copyright>Copyright 2023, MANJA STUDIO.</copyright>
+	<copyright>Copyright 2025, Velcent Games.</copyright>
   <initialWindow>
     <content>Videografi.swf</content>
     <systemChrome>standard</systemChrome>
@@ -45,8 +45,15 @@
   <customUpdateUI>false</customUpdateUI>
   <allowBrowserInvocation>false</allowBrowserInvocation>
   <android>
+    <addAirToAppID>false</addAirToAppID>
+    <createAppBundle>true</createAppBundle>
+    <gradleVersion>8.14.3</gradleVersion>
+    <androidGradlePluginVersion>8.11.0</androidGradlePluginVersion>
+    <androidBuildToolsVersion>36.0.0</androidBuildToolsVersion>
+    <androidCompileSdkVersion>36</androidCompileSdkVersion>
     <manifestAdditions><![CDATA[
 <manifest android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="36"/>
 	<uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="android.permission.WAKE_LOCK"/>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -70,6 +77,22 @@
 </manifest>
 ]]></manifestAdditions>
   </android>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   

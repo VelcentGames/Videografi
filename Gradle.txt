@@ -1,0 +1,14 @@
+    ndkVersion "26.1.10909125"
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++17"
+            }
+        }
+    buildTypes {
+        release {
+            ndk {
+                debugSymbolLevel 'FULL'
+                //debugSymbolLevel 'SYMBOL_TABLE '
+            }
+        }
+    }
