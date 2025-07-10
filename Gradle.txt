@@ -1,14 +1,19 @@
-    ndkVersion "26.1.10909125"
-        externalNativeBuild {
-            cmake {
-                cppFlags "-std=c++17"
-            }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
+    }
+    buildToolsVersion '36.0.0'
+    ndkVersion '29.0.13599879'
+    externalNativeBuild {
+        cmake {
+            cppFlags "-std=c++17"
         }
+    }
     buildTypes {
         release {
             ndk {
                 debugSymbolLevel 'FULL'
-                //debugSymbolLevel 'SYMBOL_TABLE '
+                //debugSymbolLevel 'SYMBOL_TABLE'
             }
         }
     }

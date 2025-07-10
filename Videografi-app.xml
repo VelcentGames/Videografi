@@ -21,9 +21,9 @@
   <versionNumber>1.0.2</versionNumber>
   <versionLabel>1.0.2</versionLabel>
   <filename>Videografi</filename>
-	<description>Tutorial pengambilan video</description>
+  <description>Tutorial pengambilan video</description>
   <name>Videografi</name>
-	<copyright>Copyright 2025, Velcent Games.</copyright>
+  <copyright>Copyright 2025, Velcent Games.</copyright>
   <initialWindow>
     <content>Videografi.swf</content>
     <systemChrome>standard</systemChrome>
@@ -77,6 +77,11 @@
 </manifest>
 ]]></manifestAdditions>
   </android>
+  
+  
+  
+  
+  
   
   
   
