@@ -12,7 +12,7 @@
 	import flash.utils.setTimeout;
 	import com.HxJ.media.Music;
 	import com.HxJ.utils.Transforms;
-	import com.HxJ.utils.adMob;
+	// import com.HxJ.utils.adMob;
 
 	public class init {
 		
@@ -38,10 +38,10 @@
 			
 			Trans = new Transforms( stage );
 			root.settings = { music:false, help:false };
-			root.music = music = new Music([ 'res/audio/Intro.mp3', 'off' ]);
+			// root.music = music = new Music([ 'res/audio/Intro.mp3', 'off' ]);
 			if ( root.settings.music ) music.play();
 			
-			new adMob( root );
+			// new adMob( root );
 			root.stop();
 			initEvent();
 

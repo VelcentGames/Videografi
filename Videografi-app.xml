@@ -18,8 +18,8 @@
 -->
 <application xmlns="http://ns.adobe.com/air/application/51.2">
   <id>studio.manja.videografi</id>
-  <versionNumber>1.0.3</versionNumber>
-  <versionLabel>1.0.3</versionLabel>
+  <versionNumber>1.0.4</versionNumber>
+  <versionLabel>1.0.4</versionLabel>
   <filename>Videografi</filename>
   <description>Tutorial pengambilan video</description>
   <name>Videografi</name>
@@ -49,19 +49,19 @@
     <createAppBundle>true</createAppBundle>
     <gradleVersion>8.14.3</gradleVersion>
     <androidGradlePluginVersion>8.11.0</androidGradlePluginVersion>
-    <androidBuildToolsVersion>36.0.0</androidBuildToolsVersion>
+    <androidBuildToolsVersion>36.1.0</androidBuildToolsVersion>
     <androidCompileSdkVersion>36</androidCompileSdkVersion>
     <manifestAdditions><![CDATA[
 <manifest android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="36"/>
-	<uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
-	<uses-permission android:name="android.permission.INTERNET"/>
+	<!-- <uses-permission android:name="com.google.android.gms.permission.AD_ID"/> -->
+	<!-- <uses-permission android:name="android.permission.INTERNET"/> -->
 	<uses-permission android:name="android.permission.WAKE_LOCK"/>
-	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-	<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+	<!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> -->
+	<!-- <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/> -->
 	<application android:hardwareAccelerated="true">
 		<meta-data android:name="android.max_aspect" android:value="2.1" />
-		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+		<!-- <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
 		<activity android:name="com.google.android.gms.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:theme="@android:style/Theme.Translucent"/>
 		<receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"></receiver>
 		<receiver android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:enabled="true" android:exported="true" android:permission="android.permission.INSTALL_PACKAGES">
@@ -73,7 +73,7 @@
 		<service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:enabled="true" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE"/>
 		<receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"></receiver>
 		<service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
-		<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3940256099942544~3347511713"/>
+		<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3940256099942544~3347511713"/> -->
 	</application>
 </manifest>
 ]]></manifestAdditions>
@@ -110,7 +110,6 @@
   
   
   
-  <extensions>
-    <extensionID>studio.manja.ads.AdMob</extensionID>
-  </extensions>
+  
+  
 </application>
